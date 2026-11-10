@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PK13 | Orçamento Virtual</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+ <header id="cabecalho-pk13" class="cabecalho-editorial"></header>
+<script src="./js/header.js"></script>
+
+<main>
+    <section class="orcamento-hero">
+        <div class="container">
+            <span class="eyebrow">PK13 FOTOGRAFIA</span>
+            <h1>Vamos planejar seu <span>próximo projeto.</span></h1>
+            <p>
+                Personalize seu pedido, conheça uma estimativa de valor
+                e envie os detalhes para nossa equipe.
+            </p>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <form id="formOrcamento">
+            <div class="row g-4">
+
+                <!-- Formulário -->
+                <div class="col-lg-7">
+                    <div class="painel-orcamento">
+
+                        <div class="titulo-formulario">
+                            <span class="numero-etapa">01</span>
+                            <div>
+                                <h2>Seu projeto</h2>
+                                <p>Escolha o serviço e informe os detalhes.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="servico" class="form-label">
+                                Tipo de serviço *
+                            </label>
+
+                            <select id="servico" class="form-select" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="Casamentos" data-preco="1200">
+                                    Casamentos — a partir de R$ 1.200
+                                </option>
+                                <option value="Retratos" data-preco="250">
+                                    Retratos — a partir de R$ 250
+                                </option>
+                                <option value="Eventos" data-preco="700">
+                                    Eventos — a partir de R$ 700
+                                </option>
+                                <option value="Produtos" data-preco="300">
+                                    Fotografia de produtos — a partir de R$ 300
+                                </option>
+                                <option value="Família" data-preco="350">
+                                    Família — a partir de R$ 350
+                                </option>
+                                <option value="Moda e editorial" data-preco="500">
+                                    Moda e editorial — a partir de R$ 500
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="dataEvento" class="form-label">
+                                    Data desejada
+                                </label>
+                                <input
+                                    type="date"
+                                    id="dataEvento"
+                                    class="form-control"
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="local" class="form-label">
+                                    Local do ensaio/evento
+                                </label>
+                                <input
+                                    type="text"
+                                    id="local"
+                                    class="form-control"
+                                    placeholder="Ex.: São Paulo"
+                                >
+                            </div>
+                        </div>
+
+                        <hr class="divisor-formulario">
+
+                        <div class="titulo-formulario">
+                            <span class="numero-etapa">02</span>
+                            <div>
+                                <h2>Personalize o pacote</h2>
+                                <p>Adicione itens à sua estimativa.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="horas" class="form-label">
+                                Horas adicionais de cobertura
+                            </label>
+                            <select id="horas" class="form-select">
+                                <option value="0">Sem horas adicionais</option>
+                                <option value="1">+ 1 hora — R$ 120</option>
+                                <option value="2">+ 2 horas — R$ 240</option>
+                                <option value="3">+ 3 horas — R$ 360</option>
+                                <option value="4">+ 4 horas — R$ 480</option>
+                            </select>
+                            <div class="form-text">
+                                Valor demonstrativo de R$ 120 por hora.
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="fotos" class="form-label">
+                                Pacote de fotos editadas
+                            </label>
+                            <select id="fotos" class="form-select">
+                                <option value="0">Pacote básico — incluído</option>
+                                <option value="100">10 fotos extras — R$ 100</option>
+                                <option value="200">20 fotos extras — R$ 200</option>
+                                <option value="350">40 fotos extras — R$ 350</option>
+                            </select>
+                        </div>
+
+                        <hr class="divisor-formulario">
+
+                        <div class="titulo-formulario">
+                            <span class="numero-etapa">03</span>
+                            <div>
+                                <h2>Seus dados</h2>
+                                <p>Para que possamos entrar em contato.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">
+                                Nome *
+                            </label>
+                            <input
+                                type="text"
+                                id="nome"
+                                class="form-control"
+                                placeholder="Seu nome completo"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">
+                                    E-mail
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="voce@exemplo.com"
+                                    autocomplete="email"
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="telefone" class="form-label">
+                                    Telefone
+                                </label>
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    class="form-control"
+                                    placeholder="(11) 99999-9999"
+                                    autocomplete="tel"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="mt-4 mb-3">
+                            <label for="observacoes" class="form-label">
+                                Conte mais sobre seu projeto
+                            </label>
+                            <textarea
+                                id="observacoes"
+                                class="form-control"
+                                rows="4"
+                                placeholder="Descreva suas ideias, necessidades ou preferências..."
+                            ></textarea>
+                        </div>
+
+                        <p class="form-text">
+                            * Campos obrigatórios. Os valores são estimativas
+                            ilustrativas, sujeitos à confirmação do estúdio.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Resumo do orçamento -->
+                <div class="col-lg-5">
+                    <aside class="resumo-orcamento">
+                        <span class="eyebrow">RESUMO DO PEDIDO</span>
+
+                        <h2>Seu orçamento</h2>
+                        <p class="texto-resumo">
+                            O valor será atualizado conforme suas escolhas.
+                        </p>
+
+                        <div class="linha-resumo">
+                            <span>Serviço</span>
+                            <strong id="resumoServico">Não selecionado</strong>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <span>Valor inicial</span>
+                            <strong id="precoBase">R$ 0,00</strong>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <span>Horas adicionais</span>
+                            <strong id="precoHoras">R$ 0,00</strong>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <span>Fotos extras</span>
+                            <strong id="precoFotos">R$ 0,00</strong>
+                        </div>
+
+                        <hr class="divisor-formulario">
+
+                        <div class="total-orcamento">
+                            <span>Estimativa total</span>
+                            <strong id="total">R$ 0,00</strong>
+                        </div>
+
+                        <p class="aviso-orcamento">
+                            Esta é uma estimativa, não uma confirmação de
+                            contratação. O valor final depende da análise
+                            do projeto pela equipe.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="btn btn-pk13 w-100 mt-3"
+                        >
+                            Fechar orçamento ↗
+                        </button>
+
+                        <a
+                            href="vitrine.html"
+                            class="btn btn-outline-light w-100 mt-3"
+                        >
+                            Voltar aos serviços
+                        </a>
+                    </aside>
+                </div>
+
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer class="rodape py-4">
+    <div class="container text-center">
+        <p class="mb-1">PK13 Fotografia</p>
+        <small>© 2026 — Todos os direitos reservados.</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const form = document.getElementById("formOrcamento");
+
+    const servico = document.getElementById("servico");
+    const horas = document.getElementById("horas");
+    const fotos = document.getElementById("fotos");
+
+    const moeda = valor =>
+        valor.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        });
+
+    function calcularOrcamento() {
+        const opcao = servico.selectedOptions[0];
+
+        const precoBase = Number(opcao.dataset.preco || 0);
+        const precoHoras = Number(horas.value) * 120;
+        const precoFotos = Number(fotos.value);
+        const total = precoBase + precoHoras + precoFotos;
+
+        document.getElementById("resumoServico").textContent =
+            servico.value || "Não selecionado";
+
+        document.getElementById("precoBase").textContent =
+            moeda(precoBase);
+
+        document.getElementById("precoHoras").textContent =
+            moeda(precoHoras);
+
+        document.getElementById("precoFotos").textContent =
+            moeda(precoFotos);
+
+        document.getElementById("total").textContent =
+            moeda(total);
+    }
+
+    servico.addEventListener("change", calcularOrcamento);
+    horas.addEventListener("change", calcularOrcamento);
+    fotos.addEventListener("change", calcularOrcamento);
+
+    // Permite abrir a tela já com o serviço escolhido na vitrine.
+    const parametros = new URLSearchParams(window.location.search);
+    const servicoInicial = parametros.get("servico");
+
+    if (servicoInicial) {
+        const opcaoEncontrada = Array.from(servico.options).find(
+            opcao =>
+                opcao.value.toLocaleLowerCase("pt-BR") ===
+                servicoInicial.toLocaleLowerCase("pt-BR")
+        );
+
+        if (opcaoEncontrada) {
+            servico.value = opcaoEncontrada.value;
+        }
+    }
+
+    calcularOrcamento();
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        const opcao = servico.selectedOptions[0];
+
+        if (!servico.value || !opcao.dataset.preco) {
+            servico.focus();
+            return;
+        }
+
+        const precoBase = Number(opcao.dataset.preco);
+        const precoHoras = Number(horas.value) * 120;
+        const precoFotos = Number(fotos.value);
+        const total = precoBase + precoHoras + precoFotos;
+
+        const data = document.getElementById("dataEvento").value;
+        const dataFormatada = data
+            ? data.split("-").reverse().join("/")
+            : "A combinar";
+
+        const mensagem = [
+            "Olá! Gostaria de solicitar um orçamento à PK13.",
+            "",
+            "Nome: " + document.getElementById("nome").value,
+            "E-mail: " + (document.getElementById("email").value || "Não informado"),
+            "Telefone: " + (document.getElementById("telefone").value || "Não informado"),
+            "Serviço: " + servico.value,
+            "Data desejada: " + dataFormatada,
+            "Local: " + (document.getElementById("local").value || "A combinar"),
+            "Horas adicionais: " + horas.value,
+            "Pacote de fotos extras: " + fotos.options[fotos.selectedIndex].text,
+            "Observações: " + (document.getElementById("observacoes").value || "Nenhuma"),
+            "",
+            "Estimativa inicial: " + moeda(precoBase),
+            "Horas adicionais: " + moeda(precoHoras),
+            "Fotos extras: " + moeda(precoFotos),
+            "Total estimado: " + moeda(total),
+            "",
+            "Estou ciente de que o valor é estimativo e precisa ser confirmado."
+        ].join("\n");
+        // Número usado exclusivamente ao finalizar o orçamento.
+        // Em sites estáticos, ele continua acessível no código-fonte.
+        const telefoneEstudio = "5511973581948";
+
+        const url = "https://wa.me/" + telefoneEstudio +
+            "?text=" + encodeURIComponent(mensagem);
+
+        window.open(url, "_blank", "noopener,noreferrer");
+    });
+</script>
+
+</body>
+</html>
